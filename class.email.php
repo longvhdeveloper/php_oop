@@ -1,12 +1,13 @@
 <?php
 class Email
 {
-    private $sender;
+    //private $sender;
+    protected $sender;
     private $receipients;
     private $subject;
     private $body;
 
-    public function __construct($sender)
+    public function __construct($sender = '')
     {
         $this->sender = $sender;
         $this->receipients = array();
@@ -42,3 +43,6 @@ class Email
         }
     }
 }
+
+
+

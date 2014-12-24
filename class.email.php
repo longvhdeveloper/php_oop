@@ -19,7 +19,26 @@ class Email
 
     public function setSubject($subject)
     {
-        
+       $this->subject = $subject; 
     }
     
+    public function setBody($body)
+    {
+        $this->body = $body;
+    }
+
+    public function sendEmail()
+    {
+        foreach ($this->receipients as $receipient) {
+            $result = mail(
+                $receipient,
+                $this->subject,
+                "From: {$this->sender}\r\n"
+            );
+
+            if ($result) {
+                echo "Mail successfully send to {$receipient} <br/>";
+            }
+        }
+    }
 }

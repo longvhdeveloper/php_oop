@@ -8,4 +8,19 @@ class Student
     {
         $this->name = $name;
     }
+  
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    public function setRoll($roll)
+    {
+        $this->roll = $roll;
+    }
+    
+    public function getRoll()
+    {
+        return $this->roll;
+    }
 }

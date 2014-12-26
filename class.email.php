@@ -3,7 +3,7 @@ class Email
 {
     //private $sender;
     protected $sender;
-    private $receipients;
+    protected $receipients;
     private $subject;
     private $body;
 
@@ -12,7 +12,7 @@ class Email
         $this->sender = $sender;
         $this->receipients = array();
     }
-    
+
     public function addReceipients($receipient)
     {
         array_push($this->receipients, $receipient);
@@ -20,9 +20,9 @@ class Email
 
     public function setSubject($subject)
     {
-       $this->subject = $subject; 
+       $this->subject = $subject;
     }
-    
+
     public function setBody($body)
     {
         $this->body = $body;
